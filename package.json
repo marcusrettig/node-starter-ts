@@ -8,10 +8,21 @@
   "scripts": {
     "start": "tsc && node dist/run.js",
     "lint": "tslint -p tsconfig.json 'src/**/*.ts'",
-    "lint:fix": "tslint -p tsconfig.json --fix 'src/**/*.ts'"
+    "lint:fix": "tslint -p tsconfig.json --fix 'src/**/*.ts'",
+    "test": "jest --watch"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
   },
   "devDependencies": {
+    "@types/jest": "^22.2.3",
     "@types/node": "^10.0.8",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.6",
     "tslint": "^5.10.0",
     "typescript": "^2.8.3"
   }
