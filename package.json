@@ -6,7 +6,8 @@
   "main": "index.js",
   "license": "ISC",
   "scripts": {
-    "start": "tsc && node dist/run.js",
+    "start": "npm run build && node dist/run.js",
+    "build": "rm -rf dist && tsc",
     "lint": "tslint -p tsconfig.json 'src/**/*.ts'",
     "lint:fix": "tslint -p tsconfig.json --fix 'src/**/*.ts'",
     "test": "jest --watch"
@@ -16,7 +17,14 @@
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
