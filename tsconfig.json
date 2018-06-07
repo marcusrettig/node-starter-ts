@@ -7,13 +7,7 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "node_modules/*",
-        "src/types/*"
-      ]
-    },
+    "baseUrl": "src",
     "lib": [
       "es2017"
     ]
