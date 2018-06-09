@@ -3,7 +3,6 @@
   "private": true,
   "version": "1.0.0",
   "description": "Typescript Node Starter",
-  "main": "index.js",
   "license": "ISC",
   "scripts": {
     "start": "npm run build && node dist/run.js",
@@ -14,7 +13,10 @@
     "test:coverage": "jest --coverage"
   },
   "jest": {
-    "moduleDirectories": ["node_modules", "."],
+    "moduleDirectories": [
+      "node_modules",
+      "."
+    ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
