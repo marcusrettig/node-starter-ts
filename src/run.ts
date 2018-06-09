@@ -1,3 +1,3 @@
-import { App } from "./App";
+import { getMessage } from "./message";
 
-new App().run();
+process.stdout.write(getMessage() + "\n");
