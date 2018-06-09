@@ -10,9 +10,11 @@
     "build": "rm -rf dist && tsc",
     "lint": "tslint -p tsconfig.json 'src/**/*.ts'",
     "lint:fix": "tslint -p tsconfig.json --fix 'src/**/*.ts'",
-    "test": "jest --watch"
+    "test": "jest --verbose --watch",
+    "test:coverage": "jest --coverage"
   },
   "jest": {
+    "moduleDirectories": ["node_modules", "."],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
