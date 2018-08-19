@@ -1,3 +1,3 @@
-import { getMessage } from "./message";
+import { getMessage } from './message';
 
-process.stdout.write(getMessage() + "\n");
+process.stdout.write(getMessage() + '\n');
