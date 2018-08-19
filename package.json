@@ -7,8 +7,8 @@
   "scripts": {
     "start": "npm run build && node dist/run.js",
     "build": "rm -rf dist && tsc -p tsconfig.app.json",
-    "lint": "tslint -p tsconfig.json 'src/**/*.ts'",
-    "lint:fix": "tslint -p tsconfig.json --fix 'src/**/*.ts'",
+    "lint": "tslint -p tsconfig.json '{src,test}/**/*.ts'",
+    "lint:fix": "npm run lint -- --fix",
     "test": "jest --verbose --watch",
     "test:coverage": "jest --coverage"
   },
