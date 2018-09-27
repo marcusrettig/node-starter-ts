@@ -30,10 +30,28 @@
       "node"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{json,md,yml}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts": [
+      "tslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
   "devDependencies": {
     "@types/jest": "^22.2.3",
     "@types/node": "^10.3.0",
+    "husky": "^1.0.1",
     "jest": "^22.4.4",
+    "lint-staged": "^7.3.0",
     "ts-jest": "^22.4.6",
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.15.0",
