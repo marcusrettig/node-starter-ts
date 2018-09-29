@@ -13,6 +13,7 @@
     "test:coverage": "jest --coverage"
   },
   "jest": {
+    "testEnvironment": "node",
     "moduleDirectories": [
       "node_modules",
       "."
